@@ -39,13 +39,23 @@ class LinkedList:
         
         # new_list.printList()
         return new_list
+    
+    def removeDuplicacy(self):
+        tmp = self.head
+        while tmp.next:
+            if tmp.data == tmp.next.data:
+                print(f"Yes this is duplicate node {tmp.data} so removing one duplicate node")
+                tmp.next = tmp.next.next
+                return
+            tmp = tmp.next
             
             
         
 l1 = LinkedList()
+l1.addAtBegining(0)
 l1.addAtBegining(10)
 l1.addAtBegining(20)
-l1.addAtBegining(30)
+l1.addAtBegining(20)
 l1.addAtBegining(40)
 l1.addAtBegining(50)
 l1.addAtBegining(60)
@@ -53,4 +63,9 @@ l1.deleteNodeAtEnd()
 l1.printList()
 reversed_new_list = l1.reverseList()
 print("List After Reverse")  
-reversed_new_list.printList() 
+reversed_new_list.printList()
+print("Old List")
+l1.printList()
+l1.removeDuplicacy() 
+print("After Removing Duplicate")
+l1.printList()

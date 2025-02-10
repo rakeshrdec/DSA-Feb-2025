@@ -32,8 +32,13 @@ class LinkedList:
         
     def reverseList(self):
         tmp = self.head
-        if tmp:
-            print(tmp.data)
+        new_list = LinkedList()
+        while tmp:
+            new_list.addAtBegining(tmp.data)
+            tmp = tmp.next
+        
+        # new_list.printList()
+        return new_list
             
             
         
@@ -41,5 +46,11 @@ l1 = LinkedList()
 l1.addAtBegining(10)
 l1.addAtBegining(20)
 l1.addAtBegining(30)
+l1.addAtBegining(40)
+l1.addAtBegining(50)
+l1.addAtBegining(60)
 l1.deleteNodeAtEnd()
 l1.printList()
+reversed_new_list = l1.reverseList()
+print("List After Reverse")  
+reversed_new_list.printList() 

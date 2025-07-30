@@ -1,0 +1,63 @@
+Asymptotic Notation
+Analysis of Algorithms(Background)
+Order Of Growth
+Best, Average and Worst cases
+Asymptotic Notation
+Big O Notation
+Omega Notation
+Theta Notation
+--- Have to create notes on this -----
+
+// TOPICS COVERED IN DS
+
+*TIME AND SPACE COMPLEXITY
+	Asymptotic Notation
+Analysis of Algorithms(Background)
+Order Of Growth
+Best, Average and Worst cases
+Asymptotic Notation
+Big O Notation
+Omega Notation
+Theta Notation
+Analysis of common loops
+Analysis of multiple loops
+Analysis of recursion
+Recursion tree method for solving recurrences
+upper bound using recursion tree method
+space complexity
+
+*MATHEMATICS
+
+count digits
+palindrome numbers
+factorial of a number 
+trailing zeros in factorial
+GCD or HCF of 2 numbers
+LCM of 2 numbers
+check for prime numbers
+prime factors
+All divisors of a number
+sieve of erastosthenes
+computing power
+Iterative power
+
+*BITWISE OPERATORS
+	bitwise operators in CPP part1(OR, AND, XOR(same bits return 0 else return 1))
+	bitwise operators in CPP part2(left shift, right shift, Bitwise not ~)
+
+
+Qs>> how to represent negative number in binary
+Qs>> what is 2s complements and what are the benefits of this
+Qs>> what is concept of overflow like this
+
+=== upto 29 JULY 29 2025 ====
+
+
+
+
+
+
+----------------------------------
+TARGET DATE || TARGET LAST TOPIC
+----------------------------------
+AUG 2 2025  || Recursion

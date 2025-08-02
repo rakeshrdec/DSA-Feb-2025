@@ -23,7 +23,7 @@ public class trailingZeros {
     }
 
     public static void main(String[] args) {
-        System.out.println("Har Har Mahade !");
+        System.out.println("Har Har Mahadev !");
         // trailingZeros t = new trailingZeros();
         int num = 30;
         // trailing zeros in factorial of goiven num 
@@ -32,6 +32,9 @@ public class trailingZeros {
         {
             trailingZeroCOunt = trailingZeroCOunt + num / i;
         }
+        // Time COmplexity : O(n/5)
+        // Space complexity : O(1)
+        // Auxilary Space : O(n/5)
         System.out.println("printing factorial of given num "+factorial(num));
         System.out.println("trailing zero count of factorial of given number is :"+trailingZeroCOunt);
     }

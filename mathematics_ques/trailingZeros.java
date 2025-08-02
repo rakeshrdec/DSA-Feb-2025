@@ -32,9 +32,9 @@ public class trailingZeros {
         {
             trailingZeroCOunt = trailingZeroCOunt + num / i;
         }
-        // Time COmplexity : O(n/5)
+        // Time COmplexity : O(n/5) or O(logn)
         // Space complexity : O(1)
-        // Auxilary Space : O(n/5)
+        // Auxilary Space : O(1)
         System.out.println("printing factorial of given num "+factorial(num));
         System.out.println("trailing zero count of factorial of given number is :"+trailingZeroCOunt);
     }

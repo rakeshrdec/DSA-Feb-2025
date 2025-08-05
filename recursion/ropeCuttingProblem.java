@@ -51,6 +51,7 @@ public class ropeCuttingProblem {
         int c=2;
         System.out.println("calling the repo cut function");
         System.out.println("Max deep height or pices for the given inputs are "+ropeCut(n, a, b, c));
+        // Time cpmplexity : O(3^n)
     }
     
 }

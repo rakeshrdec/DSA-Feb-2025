@@ -1,4 +1,4 @@
-public class Node{
+class Node{
     int data;
     Node next;
 
@@ -17,21 +17,45 @@ public class QueueWithLinkedList {
         front = rear = null;
     }
 
-    public Enqueue(int data)
+    public void Enqueue(int data)
     {
+        Node node = new Node(data);
         if(front==null || rear == null)
         {
-            rear.data = data;
-            rear.next = null;
-            front.data = data;
+            rear = node;
+            front = node;
             front.next = rear;
             return;
         }
+        rear.next = node;
+        rear = node;
+    }
 
-        // rear.
+    public void peekQueue()
+    {
+        System.out.print("printing the peek element of queue : => ");
+        System.out.println(front.data);
+    }
+
+    public void  Dequeue()
+    {
+        System.out.println("Deleting first element from the queue "+front.data);
+        front = front.next;
     }
     public static void main(String [] args)
     {
         System.out.println("HK ... ! ..Coding mode truend on.. ");
+        QueueWithLinkedList q = new QueueWithLinkedList();
+        q.Enqueue(10);
+        q.Enqueue(20);
+        q.Enqueue(30);
+        q.peekQueue();
+        q.Dequeue();
+        q.Dequeue();
+        q.peekQueue();
+        q.Enqueue(10);
+        q.Enqueue(20);
+        q.Dequeue();
+        q.peekQueue();
     }
 }

@@ -37,9 +37,24 @@ public class DoublyLinkedList {
         Node currentNode = startingNode;
         while (currentNode.next !=null)
         {
-            System.out.println("Data "+currentNode.data);
             currentNode = currentNode.next;
         }
+        currentNode.next = newNode;
+        newNode.prev = currentNode;
+    }
+
+    public static void addNewNodeOnGivenPos(Node startingNode, Node newNode, int position)
+    {
+        System.out.println("start adding value at pos"+position);
+        Node currentNode = startingNode;
+        int count = 1;
+        while (count != position-1)
+        {
+            System.out.println("Data "+currentNode.data);
+            currentNode = currentNode.next;
+            count++;
+        }
+        newNode.next = currentNode.next;
         currentNode.next = newNode;
         newNode.prev = currentNode;
     }
@@ -60,6 +75,8 @@ public class DoublyLinkedList {
         n3.displayNode();
         Node n4 = new Node(40);
         addNewNodeOnLastPos(n1,n4);
+        Node n5 = new Node(50);
+        addNewNodeOnGivenPos(n1,n5,3);
         printAllNodes(n1);
 
     }

@@ -1,0 +1,104 @@
+Dependency Injection 
+IOC (Inversion of Controller) -> Object life cycle manage and help to prevent data leak 
+
+
+Data Access/Integration 
+	JDBC, ORM, OXM, JMS
+	Transactions
+
+Web (MVC/Remoting)
+	web, servlet, Portlet, WebSocket
+
+AOP
+Aspects, Instrumentations
+
+
+Core container
+	Beans, core, context, Expression language
+
+Test
+
+
+-------
+Spring Framework, Spring Boot, Spring cloud, Spring Data, Spring authentication, Spring Kafka, Spring Integration, Spring security, Spring state machine
+
+
+--gen AI, microservices, reactive, web apps, serverless, event driven , batch ,cloud,
+
+
+ ________________
+|                |
+|[6th March 2026]|
+|________________|
+IoC and Dependency Injection, @component, @Autowired, constructor injection
+
+Bean Management @COnfiguration, @Bean
+Spring context: What is application context
+Spring MVC Basics: @COntroller, @RestController, @RequestMappig
+
+
+
+
+-----------------------
+
+CommandLineRunner (class)
+
+@Override void run(String ...args)-> this method run before main method
+
+
+Beans -> Beans are the java Object which managed by IOC
+@Component annotation makes the class as Beans or other same annotations are -> @Component = @Service = @RestController = @Repository all comes from org.springframework.stereotype.* 
+
+1*Constructor Dependency Inject -> DI using constructor
+2*Field Injection -> @Autowired, @Override to show or tell something to spring framework or IOC container or spring container
+
+**Story and Example
+Q--> paymentService is a interface which is implemented by 2 beans/class first RazorPay and second StripePay 
+now if we use(paymentService) this in our main method to reduce tight coupling so then IoC gets confused that which beans i have to use e and throws error like expecting 1 beans got 2
+
+A--> To overcome this problem we can put the value which bean want to use in *application.properties file and then put * @ConditionalOnProperty(name = "{var_used_in_app.properties_file}", havingValue = "{value_to_run_this_bean}") and It only caused Ambiguity problem
+
+this is how we can tell IoC to which bean t use or otherwise we have to recompile the class by removing @COntroller basically we want say here that don't use this (any ne either RazorPay or StripePay) as Bean then IoC/Spring  will not be confused
+
+>properties we can get from anywhere not only from application.properties file may be it can be from ENV file or 
+>in application.properties file if i put debug=true then it will start printing all the debug things
+
+
+++Internal Working Of Spring Boot
+
+						External Configuration
+					     (env vars, properties files)
+							|
+							|
+POJO CLASSES -----@ComponentScanning----------> IoC CONTAIONER---------------------> Application Contexts 
+
+
+Bean
+Dependency Injection
+IOC Container
+Application COntext -> Bunch Of Beans
+
+Component Scanning
+Autoconfiguration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
